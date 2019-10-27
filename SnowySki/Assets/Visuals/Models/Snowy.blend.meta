@@ -121,21 +121,6 @@ ModelImporter:
     4300036: Ski_right
     4300038: Ski_left
     7400000: Default Take
-    7400002: Bottom_Air
-    7400004: Bottom_Hit
-    7400006: Bottom_Idle
-    7400008: Bottom_JumpUp
-    7400010: Bottom_Land
-    7400012: Middle_Air
-    7400014: Middle_Hit
-    7400016: Middle_Idle
-    7400018: Middle_JumpUp
-    7400020: Middle_Land
-    7400022: Top_Air
-    7400024: Top_Hit
-    7400026: Top_Idle
-    7400028: Top_JumpUp
-    7400030: Top_Land
     9500000: //RootNode
     13700000: Bottom
     13700002: Bow1
