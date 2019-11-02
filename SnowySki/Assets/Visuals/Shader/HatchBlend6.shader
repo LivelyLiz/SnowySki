@@ -88,7 +88,7 @@ Shader "Unlit/SingleObjectHatch"
 
 				fixed intensity = dot(diffuse, fixed3(0.2326, 0.7152, 0.0722));
 
-				color.rgb =  Hatching(i.uv * 8, intensity);
+				color.rgb =  Hatching(i.uv*5, intensity);
 
 				return color;
 			}
