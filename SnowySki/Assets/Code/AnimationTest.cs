@@ -10,7 +10,8 @@ public class AnimationTest : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Anim.SetTrigger("jump_top");
+            Anim.SetTrigger("jump_middle");
+            Anim.SetTrigger("jump_bottom");
         }
     }
 }
