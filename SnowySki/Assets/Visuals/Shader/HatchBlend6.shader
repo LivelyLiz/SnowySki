@@ -7,9 +7,13 @@ Shader "Unlit/SingleObjectHatch"
 	Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}
-		_Hatch0("Hatch 0", 2D) = "white" {}
-		_Hatch1("Hatch 1", 2D) = "white" {}
+		_Hatch0("Hatch dark", 2D) = "white" {}
+		_Hatch1("Hatch light", 2D) = "white" {}
 
+		_BaseColor ("BaseColor", Color) = (1,1,1,1)
+	
+		//rotate by 0 - 0deg, 1 - 90deg, 2 - 180deg, 3 - 270deg, 4 -0deg, ....
+		_TextureAngle ("TextureAngle", Int) = 0
 	}
 	SubShader
 	{
@@ -38,13 +42,18 @@ Shader "Unlit/SingleObjectHatch"
 				float3 nrm : TEXCOORD1;
 			};
 
+			const float pi = 3.141592653589793238462;
+
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
 
 			sampler2D _Hatch0;
 			sampler2D _Hatch1;
 			float4 _LightColor0;
-			
+			float4 _BaseColor;
+
+			int _TextureAngle;
+
 			v2f vert (appdata v)
 			{
 				v2f o;
@@ -54,10 +63,23 @@ Shader "Unlit/SingleObjectHatch"
 				return o;
 			}
 
+			float2 rotateFloat2By90(float2 in_uv, int times){
+				float s = sin(times%4 * 90);
+				float c = cos(times%4 * 90);
+				float2 uv_shift = in_uv - 0.5; //move to center
+				float2 newcoords = float2(0,0);
+				newcoords.x = (uv_shift.x * c) + (uv_shift.y * (-s)) + 0.5;
+				newcoords.y = (uv_shift.x * s) + (uv_shift.y * c) + 0.5;
+
+				return newcoords;
+			}
+
 			fixed3 Hatching(float2 _uv, half _intensity)
 			{
-				half3 hatch0 = tex2D(_Hatch0, _uv).rgb;
-				half3 hatch1 = tex2D(_Hatch1, _uv).rgb;
+				float2 uv = rotateFloat2By90(_uv, _TextureAngle);
+
+				half3 hatch0 = tex2D(_Hatch0, uv).rgb;
+				half3 hatch1 = tex2D(_Hatch1, uv).rgb;
 
 				half3 overbright = max(0, _intensity - 1.0);
 
@@ -88,7 +110,7 @@ Shader "Unlit/SingleObjectHatch"
 
 				fixed intensity = dot(diffuse, fixed3(0.2326, 0.7152, 0.0722));
 
-				color.rgb =  Hatching(i.uv*5, intensity);
+				color.rgb =  Hatching(i.uv, intensity)*_BaseColor*_LightColor0;
 
 				return color;
 			}
