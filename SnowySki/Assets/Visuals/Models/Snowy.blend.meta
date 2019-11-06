@@ -51,6 +51,8 @@ ModelImporter:
     100090: UpperArm_left_0
     100092: UpperArm_right
     100094: UpperArm_right_0
+    100096: BottomTopVert
+    100098: MiddleTopVert
     400000: ArmIK_left
     400002: ArmIK_right
     400004: Bottom
@@ -99,7 +101,13 @@ ModelImporter:
     400090: UpperArm_left_0
     400092: UpperArm_right
     400094: UpperArm_right_0
+    400096: BottomTopVert
+    400098: MiddleTopVert
     2100000: unnamed
+    2300000: BottomTopVert
+    2300002: MiddleTopVert
+    3300000: BottomTopVert
+    3300002: MiddleTopVert
     4300000: Top
     4300002: Nose
     4300004: Mouth_left
@@ -120,6 +128,8 @@ ModelImporter:
     4300034: Bottom
     4300036: Ski_right
     4300038: Ski_left
+    4300040: MiddleTopVert
+    4300042: BottomTopVert
     7400000: Default Take
     7400002: Bottom_Air
     7400004: Bottom_Hit
@@ -157,6 +167,7 @@ ModelImporter:
     13700034: Top
     13700036: UpperArm_left
     13700038: UpperArm_right
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -168,16 +179,16 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
-    motionNodeName: 
+    motionNodeName: Bottom_Armature/Bottom_root
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
+    importAnimatedCustomProperties: 1
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 0
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -237,9 +248,109 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottom
+        weight: 0
+      - path: Bottom/BottomTopVert
+        weight: 1
+      - path: Bottom_Armature
+        weight: 1
+      - path: Bottom_Armature/Bottom_root
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_left_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_right_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_tophalf
+        weight: 1
+      - path: Bow1
+        weight: 0
+      - path: Bow2
+        weight: 0
+      - path: Bow3
+        weight: 0
+      - path: Bow4
+        weight: 0
+      - path: Eye_left
+        weight: 0
+      - path: Eye_right
+        weight: 0
+      - path: LowerArm_left
+        weight: 0
+      - path: LowerArm_right
+        weight: 0
+      - path: Middle
+        weight: 0
+      - path: Middle/MiddleTopVert
+        weight: 0
+      - path: Middle_Armature
+        weight: 0
+      - path: Middle_Armature/ArmIK_left
+        weight: 0
+      - path: Middle_Armature/ArmIK_right
+        weight: 0
+      - path: Middle_Armature/Elbow_right
+        weight: 0
+      - path: Middle_Armature/Ellbow_left
+        weight: 0
+      - path: Middle_Armature/Middle_root
+        weight: 0
+      - path: Middle_Armature/Middle_root/UpperArm_left_0
+        weight: 0
+      - path: Middle_Armature/Middle_root/UpperArm_left_0/LowerArm_left_0
+        weight: 0
+      - path: Middle_Armature/Middle_root/UpperArm_right_0
+        weight: 0
+      - path: Middle_Armature/Middle_root/UpperArm_right_0/LowerArm_right_0
+        weight: 0
+      - path: Middle_Armature/Middle_tophalf
+        weight: 0
+      - path: Middle_Armature/Present_0
+        weight: 0
+      - path: Mouth_left
+        weight: 0
+      - path: Mouth_middle
+        weight: 0
+      - path: Mouth_right
+        weight: 0
+      - path: Nose
+        weight: 0
+      - path: Present
+        weight: 0
+      - path: Ski_left
+        weight: 0
+      - path: Ski_right
+        weight: 0
+      - path: Top
+        weight: 0
+      - path: Top_Armature
+        weight: 0
+      - path: Top_Armature/Nose_0
+        weight: 0
+      - path: Top_Armature/Top_root
+        weight: 0
+      - path: Top_Armature/Top_root/Mouth_parent
+        weight: 0
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_left_0
+        weight: 0
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_middle_0
+        weight: 0
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_right_0
+        weight: 0
+      - path: Top_Armature/Top_tophalf
+        weight: 0
+      - path: Top_Armature/Top_tophalf/Eye_left_0
+        weight: 0
+      - path: Top_Armature/Top_tophalf/Eye_right_0
+        weight: 0
+      - path: UpperArm_left
+        weight: 0
+      - path: UpperArm_right
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 150bf27fb8cb39f4cb710635751146ee, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Bottom_Hit
@@ -265,9 +376,109 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottom
+        weight: 0
+      - path: Bottom/BottomTopVert
+        weight: 1
+      - path: Bottom_Armature
+        weight: 1
+      - path: Bottom_Armature/Bottom_root
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_left_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_right_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_tophalf
+        weight: 1
+      - path: Bow1
+        weight: 0
+      - path: Bow2
+        weight: 0
+      - path: Bow3
+        weight: 0
+      - path: Bow4
+        weight: 0
+      - path: Eye_left
+        weight: 0
+      - path: Eye_right
+        weight: 0
+      - path: LowerArm_left
+        weight: 0
+      - path: LowerArm_right
+        weight: 0
+      - path: Middle
+        weight: 0
+      - path: Middle/MiddleTopVert
+        weight: 1
+      - path: Middle_Armature
+        weight: 0
+      - path: Middle_Armature/ArmIK_left
+        weight: 1
+      - path: Middle_Armature/ArmIK_right
+        weight: 1
+      - path: Middle_Armature/Elbow_right
+        weight: 1
+      - path: Middle_Armature/Ellbow_left
+        weight: 1
+      - path: Middle_Armature/Middle_root
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0/LowerArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0/LowerArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_tophalf
+        weight: 1
+      - path: Middle_Armature/Present_0
+        weight: 1
+      - path: Mouth_left
+        weight: 0
+      - path: Mouth_middle
+        weight: 0
+      - path: Mouth_right
+        weight: 0
+      - path: Nose
+        weight: 0
+      - path: Present
+        weight: 0
+      - path: Ski_left
+        weight: 0
+      - path: Ski_right
+        weight: 0
+      - path: Top
+        weight: 0
+      - path: Top_Armature
+        weight: 0
+      - path: Top_Armature/Nose_0
+        weight: 1
+      - path: Top_Armature/Top_root
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_left_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_middle_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_right_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_left_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_right_0
+        weight: 1
+      - path: UpperArm_left
+        weight: 0
+      - path: UpperArm_right
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 150bf27fb8cb39f4cb710635751146ee, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Bottom_Idle
@@ -293,9 +504,109 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottom
+        weight: 0
+      - path: Bottom/BottomTopVert
+        weight: 1
+      - path: Bottom_Armature
+        weight: 1
+      - path: Bottom_Armature/Bottom_root
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_left_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_right_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_tophalf
+        weight: 1
+      - path: Bow1
+        weight: 0
+      - path: Bow2
+        weight: 0
+      - path: Bow3
+        weight: 0
+      - path: Bow4
+        weight: 0
+      - path: Eye_left
+        weight: 0
+      - path: Eye_right
+        weight: 0
+      - path: LowerArm_left
+        weight: 0
+      - path: LowerArm_right
+        weight: 0
+      - path: Middle
+        weight: 0
+      - path: Middle/MiddleTopVert
+        weight: 1
+      - path: Middle_Armature
+        weight: 0
+      - path: Middle_Armature/ArmIK_left
+        weight: 1
+      - path: Middle_Armature/ArmIK_right
+        weight: 1
+      - path: Middle_Armature/Elbow_right
+        weight: 1
+      - path: Middle_Armature/Ellbow_left
+        weight: 1
+      - path: Middle_Armature/Middle_root
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0/LowerArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0/LowerArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_tophalf
+        weight: 1
+      - path: Middle_Armature/Present_0
+        weight: 1
+      - path: Mouth_left
+        weight: 0
+      - path: Mouth_middle
+        weight: 0
+      - path: Mouth_right
+        weight: 0
+      - path: Nose
+        weight: 0
+      - path: Present
+        weight: 0
+      - path: Ski_left
+        weight: 0
+      - path: Ski_right
+        weight: 0
+      - path: Top
+        weight: 0
+      - path: Top_Armature
+        weight: 0
+      - path: Top_Armature/Nose_0
+        weight: 1
+      - path: Top_Armature/Top_root
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_left_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_middle_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_right_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_left_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_right_0
+        weight: 1
+      - path: UpperArm_left
+        weight: 0
+      - path: UpperArm_right
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 150bf27fb8cb39f4cb710635751146ee, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Bottom_JumpUp
@@ -321,9 +632,109 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottom
+        weight: 0
+      - path: Bottom/BottomTopVert
+        weight: 1
+      - path: Bottom_Armature
+        weight: 1
+      - path: Bottom_Armature/Bottom_root
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_left_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_right_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_tophalf
+        weight: 1
+      - path: Bow1
+        weight: 0
+      - path: Bow2
+        weight: 0
+      - path: Bow3
+        weight: 0
+      - path: Bow4
+        weight: 0
+      - path: Eye_left
+        weight: 0
+      - path: Eye_right
+        weight: 0
+      - path: LowerArm_left
+        weight: 0
+      - path: LowerArm_right
+        weight: 0
+      - path: Middle
+        weight: 0
+      - path: Middle/MiddleTopVert
+        weight: 1
+      - path: Middle_Armature
+        weight: 0
+      - path: Middle_Armature/ArmIK_left
+        weight: 1
+      - path: Middle_Armature/ArmIK_right
+        weight: 1
+      - path: Middle_Armature/Elbow_right
+        weight: 1
+      - path: Middle_Armature/Ellbow_left
+        weight: 1
+      - path: Middle_Armature/Middle_root
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0/LowerArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0/LowerArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_tophalf
+        weight: 1
+      - path: Middle_Armature/Present_0
+        weight: 1
+      - path: Mouth_left
+        weight: 0
+      - path: Mouth_middle
+        weight: 0
+      - path: Mouth_right
+        weight: 0
+      - path: Nose
+        weight: 0
+      - path: Present
+        weight: 0
+      - path: Ski_left
+        weight: 0
+      - path: Ski_right
+        weight: 0
+      - path: Top
+        weight: 0
+      - path: Top_Armature
+        weight: 0
+      - path: Top_Armature/Nose_0
+        weight: 1
+      - path: Top_Armature/Top_root
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_left_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_middle_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_right_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_left_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_right_0
+        weight: 1
+      - path: UpperArm_left
+        weight: 0
+      - path: UpperArm_right
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 150bf27fb8cb39f4cb710635751146ee, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Bottom_Land
@@ -349,9 +760,109 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottom
+        weight: 0
+      - path: Bottom/BottomTopVert
+        weight: 1
+      - path: Bottom_Armature
+        weight: 1
+      - path: Bottom_Armature/Bottom_root
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_left_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_right_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_tophalf
+        weight: 1
+      - path: Bow1
+        weight: 0
+      - path: Bow2
+        weight: 0
+      - path: Bow3
+        weight: 0
+      - path: Bow4
+        weight: 0
+      - path: Eye_left
+        weight: 0
+      - path: Eye_right
+        weight: 0
+      - path: LowerArm_left
+        weight: 0
+      - path: LowerArm_right
+        weight: 0
+      - path: Middle
+        weight: 0
+      - path: Middle/MiddleTopVert
+        weight: 1
+      - path: Middle_Armature
+        weight: 0
+      - path: Middle_Armature/ArmIK_left
+        weight: 1
+      - path: Middle_Armature/ArmIK_right
+        weight: 1
+      - path: Middle_Armature/Elbow_right
+        weight: 1
+      - path: Middle_Armature/Ellbow_left
+        weight: 1
+      - path: Middle_Armature/Middle_root
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0/LowerArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0/LowerArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_tophalf
+        weight: 1
+      - path: Middle_Armature/Present_0
+        weight: 1
+      - path: Mouth_left
+        weight: 0
+      - path: Mouth_middle
+        weight: 0
+      - path: Mouth_right
+        weight: 0
+      - path: Nose
+        weight: 0
+      - path: Present
+        weight: 0
+      - path: Ski_left
+        weight: 0
+      - path: Ski_right
+        weight: 0
+      - path: Top
+        weight: 0
+      - path: Top_Armature
+        weight: 0
+      - path: Top_Armature/Nose_0
+        weight: 1
+      - path: Top_Armature/Top_root
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_left_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_middle_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_right_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_left_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_right_0
+        weight: 1
+      - path: UpperArm_left
+        weight: 0
+      - path: UpperArm_right
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 150bf27fb8cb39f4cb710635751146ee, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Middle_Air
@@ -377,9 +888,109 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottom
+        weight: 0
+      - path: Bottom/BottomTopVert
+        weight: 1
+      - path: Bottom_Armature
+        weight: 0
+      - path: Bottom_Armature/Bottom_root
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_left_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_right_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_tophalf
+        weight: 1
+      - path: Bow1
+        weight: 0
+      - path: Bow2
+        weight: 0
+      - path: Bow3
+        weight: 0
+      - path: Bow4
+        weight: 0
+      - path: Eye_left
+        weight: 0
+      - path: Eye_right
+        weight: 0
+      - path: LowerArm_left
+        weight: 0
+      - path: LowerArm_right
+        weight: 0
+      - path: Middle
+        weight: 0
+      - path: Middle/MiddleTopVert
+        weight: 1
+      - path: Middle_Armature
+        weight: 1
+      - path: Middle_Armature/ArmIK_left
+        weight: 1
+      - path: Middle_Armature/ArmIK_right
+        weight: 1
+      - path: Middle_Armature/Elbow_right
+        weight: 1
+      - path: Middle_Armature/Ellbow_left
+        weight: 1
+      - path: Middle_Armature/Middle_root
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0/LowerArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0/LowerArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_tophalf
+        weight: 1
+      - path: Middle_Armature/Present_0
+        weight: 1
+      - path: Mouth_left
+        weight: 0
+      - path: Mouth_middle
+        weight: 0
+      - path: Mouth_right
+        weight: 0
+      - path: Nose
+        weight: 0
+      - path: Present
+        weight: 0
+      - path: Ski_left
+        weight: 0
+      - path: Ski_right
+        weight: 0
+      - path: Top
+        weight: 0
+      - path: Top_Armature
+        weight: 0
+      - path: Top_Armature/Nose_0
+        weight: 1
+      - path: Top_Armature/Top_root
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_left_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_middle_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_right_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_left_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_right_0
+        weight: 1
+      - path: UpperArm_left
+        weight: 0
+      - path: UpperArm_right
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 4c2656c5ad4d6a044b737e31564a4765, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Middle_Hit
@@ -405,9 +1016,109 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottom
+        weight: 0
+      - path: Bottom/BottomTopVert
+        weight: 1
+      - path: Bottom_Armature
+        weight: 0
+      - path: Bottom_Armature/Bottom_root
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_left_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_right_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_tophalf
+        weight: 1
+      - path: Bow1
+        weight: 0
+      - path: Bow2
+        weight: 0
+      - path: Bow3
+        weight: 0
+      - path: Bow4
+        weight: 0
+      - path: Eye_left
+        weight: 0
+      - path: Eye_right
+        weight: 0
+      - path: LowerArm_left
+        weight: 0
+      - path: LowerArm_right
+        weight: 0
+      - path: Middle
+        weight: 0
+      - path: Middle/MiddleTopVert
+        weight: 1
+      - path: Middle_Armature
+        weight: 1
+      - path: Middle_Armature/ArmIK_left
+        weight: 1
+      - path: Middle_Armature/ArmIK_right
+        weight: 1
+      - path: Middle_Armature/Elbow_right
+        weight: 1
+      - path: Middle_Armature/Ellbow_left
+        weight: 1
+      - path: Middle_Armature/Middle_root
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0/LowerArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0/LowerArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_tophalf
+        weight: 1
+      - path: Middle_Armature/Present_0
+        weight: 1
+      - path: Mouth_left
+        weight: 0
+      - path: Mouth_middle
+        weight: 0
+      - path: Mouth_right
+        weight: 0
+      - path: Nose
+        weight: 0
+      - path: Present
+        weight: 0
+      - path: Ski_left
+        weight: 0
+      - path: Ski_right
+        weight: 0
+      - path: Top
+        weight: 0
+      - path: Top_Armature
+        weight: 0
+      - path: Top_Armature/Nose_0
+        weight: 1
+      - path: Top_Armature/Top_root
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_left_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_middle_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_right_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_left_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_right_0
+        weight: 1
+      - path: UpperArm_left
+        weight: 0
+      - path: UpperArm_right
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 4c2656c5ad4d6a044b737e31564a4765, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Middle_Idle
@@ -433,9 +1144,109 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottom
+        weight: 0
+      - path: Bottom/BottomTopVert
+        weight: 1
+      - path: Bottom_Armature
+        weight: 0
+      - path: Bottom_Armature/Bottom_root
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_left_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_right_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_tophalf
+        weight: 1
+      - path: Bow1
+        weight: 0
+      - path: Bow2
+        weight: 0
+      - path: Bow3
+        weight: 0
+      - path: Bow4
+        weight: 0
+      - path: Eye_left
+        weight: 0
+      - path: Eye_right
+        weight: 0
+      - path: LowerArm_left
+        weight: 0
+      - path: LowerArm_right
+        weight: 0
+      - path: Middle
+        weight: 0
+      - path: Middle/MiddleTopVert
+        weight: 1
+      - path: Middle_Armature
+        weight: 1
+      - path: Middle_Armature/ArmIK_left
+        weight: 1
+      - path: Middle_Armature/ArmIK_right
+        weight: 1
+      - path: Middle_Armature/Elbow_right
+        weight: 1
+      - path: Middle_Armature/Ellbow_left
+        weight: 1
+      - path: Middle_Armature/Middle_root
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0/LowerArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0/LowerArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_tophalf
+        weight: 1
+      - path: Middle_Armature/Present_0
+        weight: 1
+      - path: Mouth_left
+        weight: 0
+      - path: Mouth_middle
+        weight: 0
+      - path: Mouth_right
+        weight: 0
+      - path: Nose
+        weight: 0
+      - path: Present
+        weight: 0
+      - path: Ski_left
+        weight: 0
+      - path: Ski_right
+        weight: 0
+      - path: Top
+        weight: 0
+      - path: Top_Armature
+        weight: 0
+      - path: Top_Armature/Nose_0
+        weight: 1
+      - path: Top_Armature/Top_root
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_left_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_middle_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_right_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_left_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_right_0
+        weight: 1
+      - path: UpperArm_left
+        weight: 0
+      - path: UpperArm_right
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 4c2656c5ad4d6a044b737e31564a4765, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Middle_JumpUp
@@ -461,9 +1272,109 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottom
+        weight: 0
+      - path: Bottom/BottomTopVert
+        weight: 1
+      - path: Bottom_Armature
+        weight: 0
+      - path: Bottom_Armature/Bottom_root
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_left_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_right_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_tophalf
+        weight: 1
+      - path: Bow1
+        weight: 0
+      - path: Bow2
+        weight: 0
+      - path: Bow3
+        weight: 0
+      - path: Bow4
+        weight: 0
+      - path: Eye_left
+        weight: 0
+      - path: Eye_right
+        weight: 0
+      - path: LowerArm_left
+        weight: 0
+      - path: LowerArm_right
+        weight: 0
+      - path: Middle
+        weight: 0
+      - path: Middle/MiddleTopVert
+        weight: 1
+      - path: Middle_Armature
+        weight: 1
+      - path: Middle_Armature/ArmIK_left
+        weight: 1
+      - path: Middle_Armature/ArmIK_right
+        weight: 1
+      - path: Middle_Armature/Elbow_right
+        weight: 1
+      - path: Middle_Armature/Ellbow_left
+        weight: 1
+      - path: Middle_Armature/Middle_root
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0/LowerArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0/LowerArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_tophalf
+        weight: 1
+      - path: Middle_Armature/Present_0
+        weight: 1
+      - path: Mouth_left
+        weight: 0
+      - path: Mouth_middle
+        weight: 0
+      - path: Mouth_right
+        weight: 0
+      - path: Nose
+        weight: 0
+      - path: Present
+        weight: 0
+      - path: Ski_left
+        weight: 0
+      - path: Ski_right
+        weight: 0
+      - path: Top
+        weight: 0
+      - path: Top_Armature
+        weight: 0
+      - path: Top_Armature/Nose_0
+        weight: 1
+      - path: Top_Armature/Top_root
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_left_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_middle_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_right_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_left_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_right_0
+        weight: 1
+      - path: UpperArm_left
+        weight: 0
+      - path: UpperArm_right
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 4c2656c5ad4d6a044b737e31564a4765, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Middle_Land
@@ -489,9 +1400,109 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottom
+        weight: 0
+      - path: Bottom/BottomTopVert
+        weight: 1
+      - path: Bottom_Armature
+        weight: 0
+      - path: Bottom_Armature/Bottom_root
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_left_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_right_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_tophalf
+        weight: 1
+      - path: Bow1
+        weight: 0
+      - path: Bow2
+        weight: 0
+      - path: Bow3
+        weight: 0
+      - path: Bow4
+        weight: 0
+      - path: Eye_left
+        weight: 0
+      - path: Eye_right
+        weight: 0
+      - path: LowerArm_left
+        weight: 0
+      - path: LowerArm_right
+        weight: 0
+      - path: Middle
+        weight: 0
+      - path: Middle/MiddleTopVert
+        weight: 1
+      - path: Middle_Armature
+        weight: 1
+      - path: Middle_Armature/ArmIK_left
+        weight: 1
+      - path: Middle_Armature/ArmIK_right
+        weight: 1
+      - path: Middle_Armature/Elbow_right
+        weight: 1
+      - path: Middle_Armature/Ellbow_left
+        weight: 1
+      - path: Middle_Armature/Middle_root
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0/LowerArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0/LowerArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_tophalf
+        weight: 1
+      - path: Middle_Armature/Present_0
+        weight: 1
+      - path: Mouth_left
+        weight: 0
+      - path: Mouth_middle
+        weight: 0
+      - path: Mouth_right
+        weight: 0
+      - path: Nose
+        weight: 0
+      - path: Present
+        weight: 0
+      - path: Ski_left
+        weight: 0
+      - path: Ski_right
+        weight: 0
+      - path: Top
+        weight: 0
+      - path: Top_Armature
+        weight: 0
+      - path: Top_Armature/Nose_0
+        weight: 1
+      - path: Top_Armature/Top_root
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_left_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_middle_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_right_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_left_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_right_0
+        weight: 1
+      - path: UpperArm_left
+        weight: 0
+      - path: UpperArm_right
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 4c2656c5ad4d6a044b737e31564a4765, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Top_Air
@@ -517,9 +1528,109 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottom
+        weight: 0
+      - path: Bottom/BottomTopVert
+        weight: 1
+      - path: Bottom_Armature
+        weight: 0
+      - path: Bottom_Armature/Bottom_root
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_left_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_right_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_tophalf
+        weight: 1
+      - path: Bow1
+        weight: 0
+      - path: Bow2
+        weight: 0
+      - path: Bow3
+        weight: 0
+      - path: Bow4
+        weight: 0
+      - path: Eye_left
+        weight: 0
+      - path: Eye_right
+        weight: 0
+      - path: LowerArm_left
+        weight: 0
+      - path: LowerArm_right
+        weight: 0
+      - path: Middle
+        weight: 0
+      - path: Middle/MiddleTopVert
+        weight: 1
+      - path: Middle_Armature
+        weight: 0
+      - path: Middle_Armature/ArmIK_left
+        weight: 1
+      - path: Middle_Armature/ArmIK_right
+        weight: 1
+      - path: Middle_Armature/Elbow_right
+        weight: 1
+      - path: Middle_Armature/Ellbow_left
+        weight: 1
+      - path: Middle_Armature/Middle_root
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0/LowerArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0/LowerArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_tophalf
+        weight: 1
+      - path: Middle_Armature/Present_0
+        weight: 1
+      - path: Mouth_left
+        weight: 0
+      - path: Mouth_middle
+        weight: 0
+      - path: Mouth_right
+        weight: 0
+      - path: Nose
+        weight: 0
+      - path: Present
+        weight: 0
+      - path: Ski_left
+        weight: 0
+      - path: Ski_right
+        weight: 0
+      - path: Top
+        weight: 0
+      - path: Top_Armature
+        weight: 1
+      - path: Top_Armature/Nose_0
+        weight: 1
+      - path: Top_Armature/Top_root
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_left_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_middle_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_right_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_left_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_right_0
+        weight: 1
+      - path: UpperArm_left
+        weight: 0
+      - path: UpperArm_right
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 220b7e3d05f80134b95c7388beb3d01c, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Top_Hit
@@ -545,9 +1656,109 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottom
+        weight: 0
+      - path: Bottom/BottomTopVert
+        weight: 1
+      - path: Bottom_Armature
+        weight: 0
+      - path: Bottom_Armature/Bottom_root
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_left_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_right_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_tophalf
+        weight: 1
+      - path: Bow1
+        weight: 0
+      - path: Bow2
+        weight: 0
+      - path: Bow3
+        weight: 0
+      - path: Bow4
+        weight: 0
+      - path: Eye_left
+        weight: 0
+      - path: Eye_right
+        weight: 0
+      - path: LowerArm_left
+        weight: 0
+      - path: LowerArm_right
+        weight: 0
+      - path: Middle
+        weight: 0
+      - path: Middle/MiddleTopVert
+        weight: 1
+      - path: Middle_Armature
+        weight: 0
+      - path: Middle_Armature/ArmIK_left
+        weight: 1
+      - path: Middle_Armature/ArmIK_right
+        weight: 1
+      - path: Middle_Armature/Elbow_right
+        weight: 1
+      - path: Middle_Armature/Ellbow_left
+        weight: 1
+      - path: Middle_Armature/Middle_root
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0/LowerArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0/LowerArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_tophalf
+        weight: 1
+      - path: Middle_Armature/Present_0
+        weight: 1
+      - path: Mouth_left
+        weight: 0
+      - path: Mouth_middle
+        weight: 0
+      - path: Mouth_right
+        weight: 0
+      - path: Nose
+        weight: 0
+      - path: Present
+        weight: 0
+      - path: Ski_left
+        weight: 0
+      - path: Ski_right
+        weight: 0
+      - path: Top
+        weight: 0
+      - path: Top_Armature
+        weight: 1
+      - path: Top_Armature/Nose_0
+        weight: 1
+      - path: Top_Armature/Top_root
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_left_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_middle_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_right_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_left_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_right_0
+        weight: 1
+      - path: UpperArm_left
+        weight: 0
+      - path: UpperArm_right
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 220b7e3d05f80134b95c7388beb3d01c, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Top_Idle
@@ -573,9 +1784,109 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottom
+        weight: 0
+      - path: Bottom/BottomTopVert
+        weight: 1
+      - path: Bottom_Armature
+        weight: 0
+      - path: Bottom_Armature/Bottom_root
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_left_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_right_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_tophalf
+        weight: 1
+      - path: Bow1
+        weight: 0
+      - path: Bow2
+        weight: 0
+      - path: Bow3
+        weight: 0
+      - path: Bow4
+        weight: 0
+      - path: Eye_left
+        weight: 0
+      - path: Eye_right
+        weight: 0
+      - path: LowerArm_left
+        weight: 0
+      - path: LowerArm_right
+        weight: 0
+      - path: Middle
+        weight: 0
+      - path: Middle/MiddleTopVert
+        weight: 1
+      - path: Middle_Armature
+        weight: 0
+      - path: Middle_Armature/ArmIK_left
+        weight: 1
+      - path: Middle_Armature/ArmIK_right
+        weight: 1
+      - path: Middle_Armature/Elbow_right
+        weight: 1
+      - path: Middle_Armature/Ellbow_left
+        weight: 1
+      - path: Middle_Armature/Middle_root
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0/LowerArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0/LowerArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_tophalf
+        weight: 1
+      - path: Middle_Armature/Present_0
+        weight: 1
+      - path: Mouth_left
+        weight: 0
+      - path: Mouth_middle
+        weight: 0
+      - path: Mouth_right
+        weight: 0
+      - path: Nose
+        weight: 0
+      - path: Present
+        weight: 0
+      - path: Ski_left
+        weight: 0
+      - path: Ski_right
+        weight: 0
+      - path: Top
+        weight: 0
+      - path: Top_Armature
+        weight: 1
+      - path: Top_Armature/Nose_0
+        weight: 1
+      - path: Top_Armature/Top_root
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_left_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_middle_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_right_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_left_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_right_0
+        weight: 1
+      - path: UpperArm_left
+        weight: 0
+      - path: UpperArm_right
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 220b7e3d05f80134b95c7388beb3d01c, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Top_JumpUp
@@ -601,9 +1912,109 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottom
+        weight: 0
+      - path: Bottom/BottomTopVert
+        weight: 1
+      - path: Bottom_Armature
+        weight: 0
+      - path: Bottom_Armature/Bottom_root
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_left_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_right_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_tophalf
+        weight: 1
+      - path: Bow1
+        weight: 0
+      - path: Bow2
+        weight: 0
+      - path: Bow3
+        weight: 0
+      - path: Bow4
+        weight: 0
+      - path: Eye_left
+        weight: 0
+      - path: Eye_right
+        weight: 0
+      - path: LowerArm_left
+        weight: 0
+      - path: LowerArm_right
+        weight: 0
+      - path: Middle
+        weight: 0
+      - path: Middle/MiddleTopVert
+        weight: 1
+      - path: Middle_Armature
+        weight: 0
+      - path: Middle_Armature/ArmIK_left
+        weight: 1
+      - path: Middle_Armature/ArmIK_right
+        weight: 1
+      - path: Middle_Armature/Elbow_right
+        weight: 1
+      - path: Middle_Armature/Ellbow_left
+        weight: 1
+      - path: Middle_Armature/Middle_root
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0/LowerArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0/LowerArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_tophalf
+        weight: 1
+      - path: Middle_Armature/Present_0
+        weight: 1
+      - path: Mouth_left
+        weight: 0
+      - path: Mouth_middle
+        weight: 0
+      - path: Mouth_right
+        weight: 0
+      - path: Nose
+        weight: 0
+      - path: Present
+        weight: 0
+      - path: Ski_left
+        weight: 0
+      - path: Ski_right
+        weight: 0
+      - path: Top
+        weight: 0
+      - path: Top_Armature
+        weight: 1
+      - path: Top_Armature/Nose_0
+        weight: 1
+      - path: Top_Armature/Top_root
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_left_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_middle_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_right_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_left_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_right_0
+        weight: 1
+      - path: UpperArm_left
+        weight: 0
+      - path: UpperArm_right
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 220b7e3d05f80134b95c7388beb3d01c, type: 2}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Top_Land
@@ -629,9 +2040,109 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bottom
+        weight: 0
+      - path: Bottom/BottomTopVert
+        weight: 1
+      - path: Bottom_Armature
+        weight: 0
+      - path: Bottom_Armature/Bottom_root
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_left_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_root/Ski_right_0
+        weight: 1
+      - path: Bottom_Armature/Bottom_tophalf
+        weight: 1
+      - path: Bow1
+        weight: 0
+      - path: Bow2
+        weight: 0
+      - path: Bow3
+        weight: 0
+      - path: Bow4
+        weight: 0
+      - path: Eye_left
+        weight: 0
+      - path: Eye_right
+        weight: 0
+      - path: LowerArm_left
+        weight: 0
+      - path: LowerArm_right
+        weight: 0
+      - path: Middle
+        weight: 0
+      - path: Middle/MiddleTopVert
+        weight: 1
+      - path: Middle_Armature
+        weight: 0
+      - path: Middle_Armature/ArmIK_left
+        weight: 1
+      - path: Middle_Armature/ArmIK_right
+        weight: 1
+      - path: Middle_Armature/Elbow_right
+        weight: 1
+      - path: Middle_Armature/Ellbow_left
+        weight: 1
+      - path: Middle_Armature/Middle_root
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_left_0/LowerArm_left_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_root/UpperArm_right_0/LowerArm_right_0
+        weight: 1
+      - path: Middle_Armature/Middle_tophalf
+        weight: 1
+      - path: Middle_Armature/Present_0
+        weight: 1
+      - path: Mouth_left
+        weight: 0
+      - path: Mouth_middle
+        weight: 0
+      - path: Mouth_right
+        weight: 0
+      - path: Nose
+        weight: 0
+      - path: Present
+        weight: 0
+      - path: Ski_left
+        weight: 0
+      - path: Ski_right
+        weight: 0
+      - path: Top
+        weight: 0
+      - path: Top_Armature
+        weight: 1
+      - path: Top_Armature/Nose_0
+        weight: 1
+      - path: Top_Armature/Top_root
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_left_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_middle_0
+        weight: 1
+      - path: Top_Armature/Top_root/Mouth_parent/Mouth_right_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_left_0
+        weight: 1
+      - path: Top_Armature/Top_tophalf/Eye_right_0
+        weight: 1
+      - path: UpperArm_left
+        weight: 0
+      - path: UpperArm_right
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 220b7e3d05f80134b95c7388beb3d01c, type: 2}
       additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:

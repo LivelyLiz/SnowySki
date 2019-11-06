@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Middle
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Bottom
+    m_Weight: 0
+  - m_Path: Bottom/BottomTopVert
+    m_Weight: 0
+  - m_Path: Bottom_Armature
+    m_Weight: 0
+  - m_Path: Bottom_Armature/Bottom_root
+    m_Weight: 0
+  - m_Path: Bottom_Armature/Bottom_root/Ski_left_0
+    m_Weight: 0
+  - m_Path: Bottom_Armature/Bottom_root/Ski_right_0
+    m_Weight: 0
+  - m_Path: Bottom_Armature/Bottom_tophalf
+    m_Weight: 0
+  - m_Path: Bow1
+    m_Weight: 0
+  - m_Path: Bow2
+    m_Weight: 0
+  - m_Path: Bow3
+    m_Weight: 0
+  - m_Path: Bow4
+    m_Weight: 0
+  - m_Path: Eye_left
+    m_Weight: 0
+  - m_Path: Eye_right
+    m_Weight: 0
+  - m_Path: LowerArm_left
+    m_Weight: 0
+  - m_Path: LowerArm_right
+    m_Weight: 0
+  - m_Path: Middle
+    m_Weight: 0
+  - m_Path: Middle/MiddleTopVert
+    m_Weight: 1
+  - m_Path: Middle_Armature
+    m_Weight: 1
+  - m_Path: Middle_Armature/ArmIK_left
+    m_Weight: 1
+  - m_Path: Middle_Armature/ArmIK_right
+    m_Weight: 1
+  - m_Path: Middle_Armature/Elbow_right
+    m_Weight: 1
+  - m_Path: Middle_Armature/Ellbow_left
+    m_Weight: 1
+  - m_Path: Middle_Armature/Middle_root
+    m_Weight: 1
+  - m_Path: Middle_Armature/Middle_root/UpperArm_left_0
+    m_Weight: 1
+  - m_Path: Middle_Armature/Middle_root/UpperArm_left_0/LowerArm_left_0
+    m_Weight: 1
+  - m_Path: Middle_Armature/Middle_root/UpperArm_right_0
+    m_Weight: 1
+  - m_Path: Middle_Armature/Middle_root/UpperArm_right_0/LowerArm_right_0
+    m_Weight: 1
+  - m_Path: Middle_Armature/Middle_tophalf
+    m_Weight: 1
+  - m_Path: Middle_Armature/Present_0
+    m_Weight: 1
+  - m_Path: Mouth_left
+    m_Weight: 0
+  - m_Path: Mouth_middle
+    m_Weight: 0
+  - m_Path: Mouth_right
+    m_Weight: 0
+  - m_Path: Nose
+    m_Weight: 0
+  - m_Path: Present
+    m_Weight: 0
+  - m_Path: Ski_left
+    m_Weight: 0
+  - m_Path: Ski_right
+    m_Weight: 0
+  - m_Path: Top
+    m_Weight: 0
+  - m_Path: Top_Armature
+    m_Weight: 0
+  - m_Path: Top_Armature/Nose_0
+    m_Weight: 0
+  - m_Path: Top_Armature/Top_root
+    m_Weight: 0
+  - m_Path: Top_Armature/Top_root/Mouth_parent
+    m_Weight: 0
+  - m_Path: Top_Armature/Top_root/Mouth_parent/Mouth_left_0
+    m_Weight: 0
+  - m_Path: Top_Armature/Top_root/Mouth_parent/Mouth_middle_0
+    m_Weight: 0
+  - m_Path: Top_Armature/Top_root/Mouth_parent/Mouth_right_0
+    m_Weight: 0
+  - m_Path: Top_Armature/Top_tophalf
+    m_Weight: 0
+  - m_Path: Top_Armature/Top_tophalf/Eye_left_0
+    m_Weight: 0
+  - m_Path: Top_Armature/Top_tophalf/Eye_right_0
+    m_Weight: 0
+  - m_Path: UpperArm_left
+    m_Weight: 0
+  - m_Path: UpperArm_right
+    m_Weight: 0
