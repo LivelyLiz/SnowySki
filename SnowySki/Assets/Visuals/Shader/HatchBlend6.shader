@@ -10,15 +10,70 @@ Shader "Unlit/SingleObjectHatch"
 		_Hatch0("Hatch dark", 2D) = "white" {}
 		_Hatch1("Hatch light", 2D) = "white" {}
 
-		_BaseColor ("BaseColor", Color) = (1,1,1,1)
+		_BaseColor ("Base Color", Color) = (1,1,1,1)
 	
 		//rotate by 0 - 0deg, 1 - 90deg, 2 - 180deg, 3 - 270deg, 4 -0deg, ....
-		_TextureAngle ("TextureAngle", Int) = 0
+		_TextureAngle ("Texture Angle", Int) = 0
+
+		_OutlineWidth ("Outline Width", Float) = 0.025
+		_OutlineAngle ("Switch shader on angle", Range(0.0, 180.0)) = 89
+		_OutlineColor ("Outline Color", Color) = (0,0,0,1)
+		_OutlineZWrite ("Outline Ztest", Int) = 1
 	}
 	SubShader
 	{
 		Tags { "RenderType"="Opaque" }
 		LOD 100
+
+		// Outline
+		Pass{
+			Tags{ "LightMode" = "Always" }
+			ZWrite [_OutlineZWrite]
+			Cull Front
+			CGPROGRAM
+
+			struct appdata {
+				float4 vertex : POSITION;
+				float4 normal : NORMAL;
+			};
+
+			struct v2f {
+				float4 pos : SV_POSITION;
+			};
+
+			#pragma vertex vert
+			#pragma fragment frag
+
+			uniform float4 _OutlineColor;
+			uniform float _OutlineWidth;
+			uniform float _OutlineAngle;
+
+
+			v2f vert(appdata v) {
+				appdata original = v;
+
+				float3 scaleDir = normalize(v.vertex.xyz - float4(0,0,0,1));
+				//This shader consists of 2 ways of generating outline that are dynamically switched based on demiliter angle
+				//If vertex normal is pointed away from object origin then custom outline generation is used (based on scaling along the origin-vertex vector)
+				//Otherwise the old-school normal vector scaling is used
+				//This way prevents weird artifacts from being created when using either of the methods
+				if (degrees(acos(dot(scaleDir.xyz, v.normal.xyz))) > _OutlineAngle) {
+					v.vertex.xyz += normalize(v.normal.xyz) * _OutlineWidth;
+				}else {
+					v.vertex.xyz += scaleDir * _OutlineWidth;
+				}
+
+				v2f o;
+				o.pos = UnityObjectToClipPos(v.vertex);
+				return o;
+			}
+
+			half4 frag(v2f i) : COLOR{
+				return _OutlineColor;
+			}
+
+			ENDCG
+		}
 
 		Pass
 		{
