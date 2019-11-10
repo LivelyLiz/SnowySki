@@ -19,7 +19,7 @@ public class TransformChange : MonoBehaviour
 
     void Start()
     {
-        _initialPosition = transform.position;
+        _initialPosition = transform.localPosition;
         _initialRotation = transform.rotation;
         _initialScale = transform.lossyScale;
         MainThreadDispatcher.StartUpdateMicroCoroutine(coUpdatePositionDelta()); //instead of call StartCoroutine
@@ -29,7 +29,7 @@ public class TransformChange : MonoBehaviour
     {
         while (true)
         {
-            PositionDelta = transform.position - _initialPosition;
+            PositionDelta = transform.localPosition - _initialPosition;
             ScaleDelta = transform.lossyScale - _initialScale;
             RotationDelta = transform.rotation * Quaternion.Inverse(_initialRotation);
             yield return null;
