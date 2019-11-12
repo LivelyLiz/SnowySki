@@ -173,7 +173,7 @@ Shader "Unlit/SingleObjectHatch"
 				fixed atten = LIGHT_ATTENUATION(i); // Macro to get you the combined shadow & attenuation value.
 				fixed intensity = dot(diffuse, fixed3(0.2326, 0.7152, 0.0722)) * atten;
 
-				color.rgb =  Hatching(i.uv, intensity)*_BaseColor*_LightColor0;
+				color.rgb =  Hatching(i.uv, intensity)*_BaseColor;
 
 				return color;
 			}
