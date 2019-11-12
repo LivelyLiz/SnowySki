@@ -139,7 +139,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.9886102, b: 0.9575472, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -174,13 +174,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170076733}
-  m_LocalRotation: {x: 0.05312573, y: -0.94602615, z: 0.2045381, w: 0.24571623}
+  m_LocalRotation: {x: 0.115435146, y: -0.85271245, z: 0.21260507, w: 0.46298513}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 24.4, y: -150.88, z: 0}
+  m_LocalEulerAnglesHint: {x: 28, y: -123, z: 0}
 --- !u!4 &276479286 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400006, guid: b9d1db9e3bc6b2b4090c1d18dd6d7890,
@@ -280,14 +280,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: -0.08933476, y: 0.5586524, z: -0.060689077, w: -0.8223404}
-  m_LocalPosition: {x: 5.54, y: 3.16, z: -0.05}
+  m_LocalRotation: {x: 0.006424395, y: 0.56192225, z: 0.004364377, w: -0.8271536}
+  m_LocalPosition: {x: 7.7, y: 3.05, z: 1.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1254581746}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 12.4, y: 291.62, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.89, y: 291.62, z: 0}
 --- !u!1 &636574420
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +917,7 @@ MonoBehaviour:
   TurnOffAddTrans: {fileID: 1042324981}
   TurnOffPosFoll: {fileID: 1042324983}
   JumpKey: 97
-  JumpParams: {fileID: 11400000, guid: 3c0a146f4fc474a4c94e0eaa9c511542, type: 2}
+  JumpParams: {fileID: 11400000, guid: 03e871e5899d8a340adb21227bd60acb, type: 2}
   CharacterAnim: {fileID: 2018133914}
   AnimTrigSuffix: middle
   Rb: {fileID: 1042324986}
@@ -966,7 +966,7 @@ MonoBehaviour:
   TurnOffAddTrans: {fileID: 1042324979}
   TurnOffPosFoll: {fileID: 1042324982}
   JumpKey: 113
-  JumpParams: {fileID: 11400000, guid: 3c0a146f4fc474a4c94e0eaa9c511542, type: 2}
+  JumpParams: {fileID: 11400000, guid: e296b291d0077164da0bc9a9c02cfd57, type: 2}
   CharacterAnim: {fileID: 2018133914}
   AnimTrigSuffix: top
   Rb: {fileID: 1042324990}
@@ -1039,6 +1039,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 6b33d12ec2408dd4b92ab84783f496b6, type: 2}
+  - {fileID: 2100000, guid: 965e131d86927274c8e41d788c3a5065, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
