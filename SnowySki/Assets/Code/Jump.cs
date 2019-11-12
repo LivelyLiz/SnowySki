@@ -42,7 +42,7 @@ public class Jump : MonoBehaviour
 
         if (!_isGrounded)
         {
-            updateJump();
+            updateJump(Time.smoothDeltaTime);
         }
     }
 
@@ -70,17 +70,17 @@ public class Jump : MonoBehaviour
         _isGrounded = false;
     }
 
-    private void updateJump()
+    private void updateJump(float deltaTime)
     {
-        _velocity -= JumpParams.Gravity * Time.smoothDeltaTime * Vector3.up;
+        _velocity -= JumpParams.Gravity * deltaTime * Vector3.up;
 
         if (_velocity.y > 0)
         {
-            transform.Translate(_velocity * Time.smoothDeltaTime, Space.World);
+            transform.Translate(_velocity * deltaTime, Space.World);
         }
         else
         {
-            transform.Translate(_velocity*JumpParams.FallMultiplier * Time.smoothDeltaTime, Space.World);
+            transform.Translate(_velocity*JumpParams.FallMultiplier * deltaTime, Space.World);
         }
     }
 
