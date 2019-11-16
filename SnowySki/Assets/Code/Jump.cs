@@ -58,9 +58,13 @@ public class Jump : MonoBehaviour
     {
         if (!_isGrounded) { return; }
 
-        if (TurnOffAddTrans != null && TurnOffPosFoll != null)
+        if (TurnOffAddTrans != null)
         {
             TurnOffAddTrans.enabled = false;
+        }
+
+        if (TurnOffPosFoll != null)
+        {
             TurnOffPosFoll.enabled = false;
         }
 
@@ -88,11 +92,16 @@ public class Jump : MonoBehaviour
     {
         if (_isGrounded) { return; }
 
-        if (TurnOffAddTrans != null && TurnOffPosFoll != null)
+        if (TurnOffAddTrans != null)
         {
             TurnOffAddTrans.enabled = true;
+        }
+
+        if (TurnOffPosFoll != null)
+        {
             TurnOffPosFoll.enabled = true;
         }
+
 
         _velocity = Vector3.zero;
         CharacterAnim.SetTrigger(_land + AnimTrigSuffix);
