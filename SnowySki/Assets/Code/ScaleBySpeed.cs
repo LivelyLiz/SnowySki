@@ -15,7 +15,7 @@ public class ScaleBySpeed : MonoBehaviour
 
     public void OnEnable()
     {
-        transform.localScale = new Vector3(ScaleX ? 1 : 0, ScaleY ? 1 : 0, ScaleZ ? 1 : 0) * SpeedParams.CurrentSpeed * ScaleRatio
+        transform.localScale = new Vector3(ScaleX ? 1 : 0, ScaleY ? 1 : 0, ScaleZ ? 1 : 0) * (SpeedParams.CurrentSpeed/SpeedParams.InitialSpeed) * ScaleRatio
                                + new Vector3(!ScaleX ? 1 : 0, !ScaleY ? 1 : 0, !ScaleZ ? 1 : 0);
     }
 }
