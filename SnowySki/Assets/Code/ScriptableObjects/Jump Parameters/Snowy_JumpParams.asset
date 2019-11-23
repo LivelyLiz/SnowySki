@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cf4f8f1042a0cc4a9ba5697bdc9c14b, type: 3}
-  m_Name: SnowyTop_JumpParams
+  m_Name: Snowy_JumpParams
   m_EditorClassIdentifier: 
-  JumpVelocity: 3
-  FallMultiplier: 4
-  Gravity: 4
+  JumpVelocity: 8
+  FallMultiplier: 3
+  Gravity: 18
