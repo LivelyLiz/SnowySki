@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 2027721135671445598}
   - component: {fileID: 1311695593367935480}
   - component: {fileID: 5461071653442388963}
+  - component: {fileID: 2552632713345564060}
   m_Layer: 0
   m_Name: Quad (13)
   m_TagString: Untagged
@@ -80,16 +81,16 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5906183824976824738}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 306836ce3740f3542b31859074c1c765, type: 2}
+  - {fileID: 2100000, guid: 8113a84b402695248ae12fea49dece6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,3 +122,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b0a1920e708e214da75677e95cec112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2552632713345564060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5906183824976824738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d60e770dfdd5caf43beb07548c7f323d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InstMatProp: {fileID: 11400000, guid: 5605d806c739e1e48ac91d01b26656bc, type: 2}

@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cf4f8f1042a0cc4a9ba5697bdc9c14b, type: 3}
-  m_Name: SnowyBottom_JumpParams
+  m_Script: {fileID: 11500000, guid: d7dcbcfe9496cbb43adc89d74e6028b2, type: 3}
+  m_Name: Tree1MatProp
   m_EditorClassIdentifier: 
-  JumpVelocity: 3
-  FallMultiplier: 4
-  Gravity: 4
+  TextureIndex: {x: 0, y: 0}
+  BaseColor: {r: 1, g: 1, b: 1, a: 1}
