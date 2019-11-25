@@ -14,6 +14,7 @@ public class Death : MonoBehaviour
         if (col.gameObject.CompareTag("Obstacle"))
         {
             CharacterAnim.SetBool(_hit+AnimTrigSuffix, true);
+            CharacterAnim.SetTrigger("hit_animation");
             GameStateManager.Instance.InitGameOver();
         }
     }

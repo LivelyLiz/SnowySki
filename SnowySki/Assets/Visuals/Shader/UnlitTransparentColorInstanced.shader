@@ -24,9 +24,8 @@
             #pragma vertex vert
             #pragma fragment frag
             #pragma multi_compile_instancing
+			#pragma instancing_options assumeuniformscaling
             #include "UnityCG.cginc"
-
-			UNITY_DECLARE_TEX2DARRAY(_Textures);
 
             struct appdata
             {
@@ -48,7 +47,7 @@
 
             UNITY_INSTANCING_BUFFER_START(Props)
                 UNITY_DEFINE_INSTANCED_PROP(float4, _Color)
-				UNITY_DEFINE_INSTANCED_PROP(float2, _TextureIndex)
+				UNITY_DEFINE_INSTANCED_PROP(float4, _TextureIndex)
             UNITY_INSTANCING_BUFFER_END(Props)
            
             v2f vert(appdata v)
@@ -67,7 +66,7 @@
             {
                 UNITY_SETUP_INSTANCE_ID(i); // necessary only if any instanced properties are going to be accessed in the fragment Shader.
                 
-				float2 texIndex = UNITY_ACCESS_INSTANCED_PROP(Props, _TextureIndex);
+				float2 texIndex = UNITY_ACCESS_INSTANCED_PROP(Props, _TextureIndex).xy;
 				float2 offset = texIndex * float2(1.0/_NumTexX, 1.0/_NumTexY);
 				float4 color = tex2D(_MainTex, i.uv/float2(_NumTexX, _NumTexY) + offset) * UNITY_ACCESS_INSTANCED_PROP(Props, _Color);
 				return color;

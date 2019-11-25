@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a1f2f6be88525b499a53e626ab058a0, type: 3}
-  m_Name: EnvironmentSpeedParams
+  m_Name: TreeSpeedParams
   m_EditorClassIdentifier: 
-  InitialSpeed: 10
+  InitialSpeed: 5
   IncreaseEverySec: 20
-  SpeedIncrement: 0.5
-  CurrentSpeed: 10.508238
+  SpeedIncrement: 0.25
+  CurrentSpeed: 5
   MaximumSpeed: 20

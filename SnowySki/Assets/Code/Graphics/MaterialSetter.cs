@@ -13,12 +13,20 @@ public class MaterialSetter : MonoBehaviour
     {
         _meshRenderer = GetComponent<MeshRenderer>();
         _matPropBlock = new MaterialPropertyBlock();
+        _meshRenderer.GetPropertyBlock(_matPropBlock);
+    }
+
+    void Start()
+    {
+        _matPropBlock.SetColor("_Color", InstMatProp.BaseColor);
+        _matPropBlock.SetVector("_TextureIndex", new Vector4(InstMatProp.TextureIndex.x, InstMatProp.TextureIndex.y, 0.0f, 0.0f));
+        _meshRenderer.SetPropertyBlock(_matPropBlock);
     }
 
     void Update()
     {
-        _matPropBlock.SetColor("_Color", InstMatProp.BaseColor);
+        /*_matPropBlock.SetColor("_Color", InstMatProp.BaseColor);
         _matPropBlock.SetVector("_TextureIndex", InstMatProp.TextureIndex);
-        _meshRenderer.SetPropertyBlock(_matPropBlock);
+        _meshRenderer.SetPropertyBlock(_matPropBlock);*/
     }
 }

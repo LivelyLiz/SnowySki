@@ -26,7 +26,7 @@ public class Cycle : MonoBehaviour
 
     private bool doesSegmentCycleCondition(SnapPoints sp)
     {
-        Vector3 currSegStartPos = CycleList[_currSegment].EndSnapPoint.position;
+        Vector3 currSegStartPos = sp.EndSnapPoint.position;
         Vector3 transfPos = PositionCheckTransform.InverseTransformPoint(currSegStartPos);
 
         switch (PositionCheckAxis)

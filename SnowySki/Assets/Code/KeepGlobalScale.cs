@@ -6,10 +6,12 @@ using UniRx;
 public class KeepGlobalScale : MonoBehaviour
 {
     private Vector3 _globalScale;
+    private Vector3 _localScale;
 
     void Awake()
     {
         _globalScale = transform.lossyScale;
+        _localScale = transform.localScale;
     }
 
     void Start()
@@ -19,7 +21,7 @@ public class KeepGlobalScale : MonoBehaviour
             .DistinctUntilChanged()
             .Subscribe(_ =>
             {
-                transform.localScale = Vector3.one;
+                transform.localScale = _localScale;
 
                 Vector3 adjustedScale = Vector3.one;
                 adjustedScale.Scale(_globalScale);

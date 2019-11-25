@@ -10,7 +10,7 @@ public class GameStateManager : SingletonBehaviour<GameStateManager>
 
     public void InitGameOver()
     {
-        Debug.Log("GameOver");
+        //Debug.Log("GameOver");
     }
 
     public void InitGameStart()

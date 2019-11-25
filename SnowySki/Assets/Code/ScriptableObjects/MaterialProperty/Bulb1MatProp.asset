@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Bulb1MatProp
   m_EditorClassIdentifier: 
   TextureIndex: {x: 2, y: 0}
-  BaseColor: {r: 1, g: 0, b: 0, a: 1}
+  BaseColor: {r: 1, g: 0.99247026, b: 0, a: 1}

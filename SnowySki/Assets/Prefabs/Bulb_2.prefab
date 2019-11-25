@@ -134,4 +134,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d60e770dfdd5caf43beb07548c7f323d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InstMatProp: {fileID: 11400000, guid: 5605d806c739e1e48ac91d01b26656bc, type: 2}
+  InstMatProp: {fileID: 11400000, guid: a69d98b9c10eaa74ab216fd4e5e5913f, type: 2}

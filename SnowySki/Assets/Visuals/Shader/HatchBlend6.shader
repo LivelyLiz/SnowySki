@@ -173,13 +173,14 @@ Shader "Unlit/SingleObjectHatch"
 				fixed atten = LIGHT_ATTENUATION(i); // Macro to get you the combined shadow & attenuation value.
 				fixed intensity = dot(diffuse, fixed3(0.2326, 0.7152, 0.0722)) * atten;
 
-				color.rgb =  Hatching(i.uv, intensity)*_BaseColor;
+				color.rgb =  Hatching(i.uv, intensity)*_BaseColor*color;
 
 				return color;
 			}
 			ENDCG
 		}
 
+		/*
 		Pass
 		{
 			Tags{ "LightMode" = "ForwardAdd" } //multilight support
@@ -277,7 +278,7 @@ Shader "Unlit/SingleObjectHatch"
 				return color;
 			}
 			ENDCG
-		}
+		}*/
 	}
 	FallBack "Diffuse" //needed for shadows
 }

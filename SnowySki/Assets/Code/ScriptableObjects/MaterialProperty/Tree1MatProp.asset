@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7dcbcfe9496cbb43adc89d74e6028b2, type: 3}
   m_Name: Tree1MatProp
   m_EditorClassIdentifier: 
-  TextureIndex: {x: 0, y: 0}
+  TextureIndex: {x: 1, y: 0}
   BaseColor: {r: 1, g: 1, b: 1, a: 1}
