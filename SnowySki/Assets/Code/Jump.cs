@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Jump : MonoBehaviour
+public class Jump : MonoBehaviour, IResetable
 {
     public AddativeTransform TurnOffAddTrans;
     public PositionFollow TurnOffPosFoll;
@@ -23,13 +23,14 @@ public class Jump : MonoBehaviour
     private readonly string _air = "air_";
     private readonly string _land = "land_";
 
+    [SerializeField]
     private bool _isGrounded = true;
 
     private Vector3 _velocity = Vector3.zero;
 
-    void Start()
+    public void Reset()
     {
-        
+        ground();
     }
 
     // Update is called once per frame
@@ -57,6 +58,8 @@ public class Jump : MonoBehaviour
     private void jump()
     {
         if (!_isGrounded) { return; }
+
+        Debug.Log("Jump "+AnimTrigSuffix);
 
         if (TurnOffAddTrans != null)
         {
@@ -91,6 +94,8 @@ public class Jump : MonoBehaviour
     private void ground()
     {
         if (_isGrounded) { return; }
+
+        Debug.Log("Ground "+AnimTrigSuffix);
 
         if (TurnOffAddTrans != null)
         {

@@ -25,7 +25,6 @@ public class KeepGlobalScale : MonoBehaviour
 
                 Vector3 adjustedScale = Vector3.one;
                 adjustedScale.Scale(_globalScale);
-                Debug.Log(divideVectors(_globalScale, transform.lossyScale));
                 adjustedScale.Scale( divideVectors(_globalScale, transform.lossyScale));
 
                 transform.localScale = adjustedScale;

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 
-public class EnvironmentMove : MonoBehaviour
+public class EnvironmentMove : MonoBehaviour, IResetable
 {
     public SpeedParameters SpeedParams;
     public Axis MoveAxis;
@@ -14,6 +14,11 @@ public class EnvironmentMove : MonoBehaviour
     void Update()
     {
         transform.Translate( (InvertDirection ? -1 : 1) * getGlobalMovementVector() * Time.smoothDeltaTime * SpeedParams.CurrentSpeed);
+    }
+
+    public void Reset()
+    {
+        transform.position = Vector3.zero;
     }
 
     Vector3 getGlobalMovementVector()

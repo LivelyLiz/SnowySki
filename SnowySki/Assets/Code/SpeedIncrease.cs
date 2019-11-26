@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedIncrease : MonoBehaviour
+public class SpeedIncrease : MonoBehaviour, IResetable
 {
     public SpeedParameters SpeedParams;
 
@@ -43,6 +43,13 @@ public class SpeedIncrease : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Reset()
+    {
+        SpeedParams.Reset();
+        _startTime = Time.time;
+        _timeSinceLastIncrease = 0;
     }
 
     IEnumerator coIncreaseSpeedSmooth(float smoothingTime)

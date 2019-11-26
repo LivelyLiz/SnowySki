@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New SpeedParamters", menuName = "ScriptableObjects/SpeedParameters", order = 1)]
-public class SpeedParameters : ScriptableObject
+public class SpeedParameters : ScriptableObject, IResetable
 {
     public float InitialSpeed = 1;
 

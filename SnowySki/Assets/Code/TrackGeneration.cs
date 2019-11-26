@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Animations;
 using Random = UnityEngine.Random;
 
-public class TrackGeneration : MonoBehaviour
+public class TrackGeneration : MonoBehaviour, IResetable
 {
     public List<GameObject> TrackElements;
     public int EmptyElementIndex = 0;
@@ -38,12 +38,24 @@ public class TrackGeneration : MonoBehaviour
             _trackElements.Add(TrackElements[i].GetComponent<SnapPoints>());
         }
 
-        generateInitialTrack();
+        Reset();
     }
 
     void Update()
     {
         updateTrack();
+    }
+
+    public void Reset()
+    {
+        if(_trackElements == null) Start();
+
+        _activeElements.Clear();
+        for (int i = 0; i < TrackElements.Count; i++)
+        {
+            TrackElements[i].gameObject.SetActive(false);
+        }
+        generateInitialTrack();
     }
 
     void generateInitialTrack()
@@ -70,17 +82,14 @@ public class TrackGeneration : MonoBehaviour
         float diff_rand = Random.value;
         if (diff_rand < Probability_Easy)
         {
-            Debug.Log("Easy");
             return (int) Random.Range(0.0f, EasyElementsMaxIndex + 0.9999f);
         }
         else if (diff_rand < Probability_Easy + Probability_Medium)
         {
-            Debug.Log("Medium");
             return (int) Random.Range(EasyElementsMaxIndex + 0.0001f, MediumElementsMaxIndex + 0.9999f);
         }
         else
         {
-            Debug.Log("Hard");
             return (int)Random.Range(MediumElementsMaxIndex + 0.0001f, HardElementsMaxIndex + 0.9999f);
         }
     }

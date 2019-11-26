@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Death : MonoBehaviour
+public class Death : MonoBehaviour, IResetable
 {
     public Animator CharacterAnim;
     public string AnimTrigSuffix;
 
     private readonly string _hit = "isHit_";
+
+    public void Reset()
+    {
+        CharacterAnim.SetBool(_hit + AnimTrigSuffix, false);
+    }
 
     void OnTriggerEnter(Collider col)
     {

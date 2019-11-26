@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 
-public class Cycle : MonoBehaviour
+public class Cycle : MonoBehaviour, IResetable
 {
     public List<SnapPoints> CycleList;
 
@@ -21,6 +21,17 @@ public class Cycle : MonoBehaviour
         {
             CycleList[_currSegment].StartSnapPoint.position = CycleList[(_currSegment - 1 + CycleList.Count)%CycleList.Count].EndSnapPoint.position;
             _currSegment = (_currSegment+1)%CycleList.Count;
+        }
+    }
+
+    public void Reset()
+    {
+        _currSegment = 0;
+        CycleList[_currSegment].StartSnapPoint.position = transform.position;
+
+        for (int i = 1; i < CycleList.Count; i++)
+        {
+            CycleList[i].StartSnapPoint.position = CycleList[i - 1].EndSnapPoint.position;
         }
     }
 
