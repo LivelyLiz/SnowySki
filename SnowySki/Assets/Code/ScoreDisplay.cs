@@ -8,9 +8,20 @@ public class ScoreDisplay : MonoBehaviour
 {
     public ScoreObject Score;
     public Text ScoreText;
+    public bool ShowDiff;
 
     public void Start()
     {
-        Observable.EveryUpdate().Select(_ => Score.CurrentScore).Subscribe(score => ScoreText.text = score.ToString("n0")).AddTo(this);
+        Observable.EveryUpdate().Select(_ => Score.CurrentScore).Subscribe(score =>
+        {
+            if (ShowDiff)
+            {
+                ScoreText.text = (Score.WinScore - score).ToString("n0");
+            }
+            else
+            {
+                ScoreText.text = score.ToString("n0");
+            }
+        }).AddTo(this);
     }
 }
