@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78cf6456ee2d57c428754fbc63468479, type: 3}
   m_Name: PlayerScore
   m_EditorClassIdentifier: 
-  CurrentScore: 15.88443
-  WinScore: 100
+  CurrentScore: 3.5768247
+  WinScore: 60

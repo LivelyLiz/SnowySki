@@ -8,7 +8,7 @@ public class Jump : MonoBehaviour, IResetable
     public AddativeTransform TurnOffAddTrans;
     public PositionFollow TurnOffPosFoll;
 
-    public KeyCode JumpKey;
+    public InputMapping JumpKeys;
 
     public JumpParameters JumpParams;
 
@@ -36,7 +36,7 @@ public class Jump : MonoBehaviour, IResetable
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(JumpKey))
+        if (Input.GetKeyDown(JumpKeys.CurrentLayout.ActionToKey[AnimTrigSuffix]))
         {
             jump();
         }
