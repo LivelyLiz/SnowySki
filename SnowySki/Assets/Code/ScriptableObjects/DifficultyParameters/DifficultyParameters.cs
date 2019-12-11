@@ -9,7 +9,7 @@ public class DifficultyParameters : ScriptableObject
     private float _probEasy_default;
     [SerializeField]
     private float _probMedium_default;
-
+    
     private float _probEasy;
     private float _probMedium;
 

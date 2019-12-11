@@ -26,17 +26,24 @@ public class OptionController : MonoBehaviour
 
     public void Start()
     {
-        float easy = DiffParams.ProbabilityEasy;
-        float medium = DiffParams.ProbabilityMedium;
-        
-        DiffRatioSlider.MinSlider.value = easy;
-        DiffRatioSlider.MaxSlider.value = easy+medium;
+        ApplyDifficulty(DiffParams);
 
-        SISecondsSlider.value = SpeedParams.IncreaseEverySec;
+        SISecondsSlider.value = DefaultSpeedParams.IncreaseEverySec;
         SISecondsSlider.onValueChanged.AddListener((val) => SpeedParams.IncreaseEverySec = val);
-        SIAmountSlider.value = SpeedParams.SpeedIncrement;
+        SIAmountSlider.value = DefaultSpeedParams.SpeedIncrement;
         SIAmountSlider.onValueChanged.AddListener((val) => SpeedParams.SpeedIncrement = val);
-        SIMaxSpeedSlider.value = SpeedParams.MaximumSpeed;
+        SIMaxSpeedSlider.value = DefaultSpeedParams.MaximumSpeed;
         SIMaxSpeedSlider.onValueChanged.AddListener((val) => SpeedParams.MaximumSpeed = val);
+    }
+
+    public void ApplyDifficulty(DifficultyParameters diffParams)
+    {
+        //need this because setting the min slider adjusts the Medium probability
+        float easy = diffParams.ProbabilityEasy;
+        float medium = easy + diffParams.ProbabilityMedium;
+
+        DiffRatioSlider.MaxSlider.value = medium;
+        DiffRatioSlider.MinSlider.value = easy;
+        DiffRatioSlider.MaxSlider.value = medium;
     }
 }
