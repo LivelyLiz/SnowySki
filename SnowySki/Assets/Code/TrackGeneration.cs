@@ -14,9 +14,7 @@ public class TrackGeneration : MonoBehaviour, IResetable
     public int MediumElementsMaxIndex;
     public int HardElementsMaxIndex;
 
-    [Space] public float Probability_Easy = 0.75f;
-    public float Probability_Medium = 0.2f;
-    public float Probability_Hard = 0.05f;
+    [Space] public DifficultyParameters DiffParams;
 
     [Space]
     public Transform PositionCheckTransform;
@@ -80,11 +78,11 @@ public class TrackGeneration : MonoBehaviour, IResetable
     int getRandomTrackElement()
     {
         float diff_rand = Random.value;
-        if (diff_rand < Probability_Easy)
+        if (diff_rand < DiffParams.ProbabilityEasy)
         {
             return (int) Random.Range(0.0f, EasyElementsMaxIndex + 0.9999f);
         }
-        else if (diff_rand < Probability_Easy + Probability_Medium)
+        else if (diff_rand < DiffParams.ProbabilityEasy + DiffParams.ProbabilityMedium)
         {
             return (int) Random.Range(EasyElementsMaxIndex + 0.0001f, MediumElementsMaxIndex + 0.9999f);
         }
