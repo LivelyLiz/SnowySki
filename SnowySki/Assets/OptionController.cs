@@ -28,12 +28,14 @@ public class OptionController : MonoBehaviour
     {
         ApplyDifficulty(DiffParams);
 
-        SISecondsSlider.value = DefaultSpeedParams.IncreaseEverySec;
         SISecondsSlider.onValueChanged.AddListener((val) => SpeedParams.IncreaseEverySec = val);
-        SIAmountSlider.value = DefaultSpeedParams.SpeedIncrement;
+        SISecondsSlider.value = DefaultSpeedParams.IncreaseEverySec;
+
         SIAmountSlider.onValueChanged.AddListener((val) => SpeedParams.SpeedIncrement = val);
-        SIMaxSpeedSlider.value = DefaultSpeedParams.MaximumSpeed;
+        SIAmountSlider.value = DefaultSpeedParams.SpeedIncrement;
+        
         SIMaxSpeedSlider.onValueChanged.AddListener((val) => SpeedParams.MaximumSpeed = val);
+        SIMaxSpeedSlider.value = DefaultSpeedParams.MaximumSpeed;
     }
 
     public void ApplyDifficulty(DifficultyParameters diffParams)

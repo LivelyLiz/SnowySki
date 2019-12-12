@@ -43,8 +43,8 @@ public class MinMaxSliderController : MonoBehaviour
         OverallMin.ValueText.text = OverallMin.Value.ToString();
         OverallMax.ValueText.text = OverallMax.Value.ToString();
 
-	    MinValue.text = MinSlider.value.ToString();
-        MaxValue.text = MaxSlider.value.ToString();
+	    MinValue.text = MinSlider.value.ToString("n2");
+        MaxValue.text = MaxSlider.value.ToString("n2");
     }
 
     public void AdjustFill()
@@ -108,7 +108,7 @@ public class MinMaxSliderController : MonoBehaviour
 
         if (MinValue != null)
         {
-            MinValue.text = val.ToString();
+            MinValue.text = val.ToString("n2");
         }
 
         if (m_onValueChange != null)
@@ -135,7 +135,7 @@ public class MinMaxSliderController : MonoBehaviour
 
         if (MaxValue != null)
         {
-            MaxValue.text = val.ToString();
+            MaxValue.text = val.ToString("n2");
         }
 
         if (m_onValueChange != null)
@@ -162,8 +162,8 @@ public class MinMaxSliderController : MonoBehaviour
         OverallMin.ValueText.text = OverallMin.Value.ToString();
         OverallMax.ValueText.text = OverallMax.Value.ToString();
 
-        MinValue.text = MinSlider.value.ToString();
-        MaxValue.text = MaxSlider.value.ToString();
+        MinValue.text = MinSlider.value.ToString("n2");
+        MaxValue.text = MaxSlider.value.ToString("n2");
     }
 
     //set how the fill of the slider should look like
